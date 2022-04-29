@@ -74,34 +74,35 @@ function submit5() {
        
 }
 
+// bai 5 ////////////////////bai tap them /////////////////////
+function submit6() {
+    var count = 0 ;
+    var iii = "";
+    var n = parseInt (document.getElementById ("txtNum6").value)||0;
+    document.getElementById ("noti6").innerHTML = "";
+    if (n<=0) {document.getElementById ("noti6").innerHTML = "Nhập lại số n";}
+    else
+    {
+        // document.getElementById ("noti6").innerHTML = "n = ";
+        for(var i =1; i<=n; i++)
+        {
+            for(var y =1; y<=n; y++)
+            {
+                if( (i%y)==0 ) { count++;} 
+            }
+            if (count == 2) 
+            { 
+                 iii = iii + i + " ";
+                count = 0;
+                console.log(iii);
+            }
+            else
+            {
+                count = 0; 
+            }
+        }
+        document.getElementById ("noti6").innerHTML = "n = "+ iii;
+    }
+  
+}
 
-// function submit() {
-// var content = "";
-// var content_HTML = "";
-// for ( var i = 0; i < 5 ; i++ )
-// {  
-//     content =  content + "*&nbsp;&nbsp;&nbsp;	" ;  
-//     content_HTML += "<div>"+ content + "</div>";
-//     console.log(content_HTML);
-// }
-// document.getElementById ("noti").style.display ="block";
-// document.getElementById ("noti").innerHTML = content_HTML;
-// }
-
-
-// function submit1() {
-//      var n = parseInt (document.getElementById ("Num1").value) ||0;
-//      var x = parseInt (document.getElementById ("Num2").value) ||0;
-     
-
-//     var count1 = 0; multi = 1 ;
-//     // var contentHTML = "";
-//     do
-//     {
-//         count1++;
-//         multi = multi * count1;
-//     }
-//     while ( count1 < n) 
-//     document.getElementById ("noti1").style.display ="block";
-//     document.getElementById ("noti1").innerHTML = multi;
-// }
