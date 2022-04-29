@@ -2,6 +2,10 @@
 function submit() {
     var num = parseInt (document.getElementById ("txtNum").value);
     var count = 0, sum = 0 ;
+    console.log(num);
+    if ( isNaN(num) ) {document.getElementById ("noti").innerHTML = "Nhập số n";}
+    else
+    {
     do
     {
         count++;
@@ -10,10 +14,13 @@ function submit() {
     while ( sum <= num) 
     document.getElementById ("noti").innerHTML = "n = " + parseInt(count);
 }
+}
 // bai 2
 function submit2() {
     var x = parseInt (document.getElementById ("txtNum2").value);
     var n = parseInt (document.getElementById ("txtNum3").value);
+    if((isNaN(x))||(isNaN(n))) {document.getElementById ("noti2").innerHTML = "Nhập x và n" ;}
+    else{
     var count1 = 0, tongs = 0 ;
     do
     {
@@ -22,10 +29,13 @@ function submit2() {
     }
     while ( count1 < n) 
     document.getElementById ("noti2").innerHTML = "S(n) = " + tongs;
-}
+    }}
 // bai 3
 function submit1() {
     var n = parseInt (document.getElementById ("txtNum1").value);
+    if ( isNaN(n) ) {document.getElementById ("noti1").innerHTML = "Nhập số n";}
+    else 
+    {
     var count1 = 0, multi = 1 ;
     do
     {
@@ -34,6 +44,7 @@ function submit1() {
     }
     while ( count1 < n) 
     document.getElementById ("noti1").innerHTML = "n! = " + multi;
+}
 }
 
 // bai 4
