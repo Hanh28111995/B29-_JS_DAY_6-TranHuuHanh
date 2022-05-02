@@ -51,38 +51,23 @@ function submit1() {
 function submit5() {
     document.getElementById("noti5").innerHTML="";
     var n = parseInt (document.getElementById ("txtNum5").value);
-    var x = document.getElementsByClassName('le');
-    var y = document.getElementsByClassName('chan');
-    
     for ( var i=0; i<n ; i++)
     {
-        
         if ((i%2)==0)
         {
             const para = document.createElement("div");
             para.innerHTML = "đây là số lẻ";
-            para.setAttribute("class", "le");
+            para.style.background =  'blue'; 
             document.getElementById("noti5").appendChild(para);
        }
        else
-        {
+        {s
             const para = document.createElement("div");
             para.innerHTML = "đây là số chẵn";
-            para.setAttribute("class", "chan");
+            para.style.background =  'red';
             document.getElementById("noti5").appendChild(para);
        }
-    }
-    for (var i=0;i<x.length;i++) 
-    {
-        x[i].classList.add('bg-primary');
-        x[i].classList.remove('bg-danger');
-    }
-    for (var i=0;i<y.length;i++) 
-    {
-        y[i].classList.remove('bg-primary');
-        y[i].classList.add('bg-danger');
-    }
-       
+    }   
 }
 
 // bai 5 ////////////////////bai tap them /////////////////////
